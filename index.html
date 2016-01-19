@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hook Fork</title>
+    <link href="hook.css?v=1" rel="stylesheet">
+    <style>
+    html,body {
+      padding: 0px;
+      margin: 0px;
+      width: 100%;
+      height: 100%;
+      background-color: #ccc;
+    }
+    .container{
+      height: 100%;
+      text-align: center;
+      position: relative;
+    }
+    </style>
+  </head>
+  <body>
+      <div class="hook" id="hook">
+        <div class="hook-wrapper">
+          <div class="hook-spinner"></div>
+          <div class="hook-text">Reloading...</div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul>
+          <li>
+
+          </li>
+        </ul>
+      </div>
+
+      <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+      <script src="mousewheel.js"></script>
+      <script src="hook.min.js"></script>
+      <script>
+        $(document).ready(function() {
+
+          // Call my hook
+          $('#hook').hook({
+            reloadPage: false,
+            reloadEl: function(){
+              alert('Load the json!');
+            }
+          });
+
+        });
+      </script>
+
+  </body>
+</html>
