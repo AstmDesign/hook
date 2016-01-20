@@ -20,7 +20,7 @@ $(document).ready(function() {
       //  loop in json
       $.each(file_data.slice(last_id,end_key), function(i,data) {
         // show the data
-        var json_data = "<li data-id="+data.id+"> Name: "+data.name+"</li>";
+        var json_data = "<li data-id="+(parseInt(i)+parseInt(last_id)+1)+"> Name: "+data.name+"</li>";
         $(".container ul ").append(json_data);
       }); // each
 
